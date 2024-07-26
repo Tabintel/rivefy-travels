@@ -15,7 +15,8 @@ const MainContent = () => {
   // http://i.stack.imgur.com/oJY2K.png
   const [loading, setLoading] = useState(false);
   // let loading = false;
-  const tempKey = "74389de25cb37a10adf615e8a79c8da4";
+
+  const tempKey = process.env.NEXT_PUBLIC_PIXLAB_API_KEY;
   const handleUpload = useCallback(
     (result) => {
       setImage(result.info?.secure_url);
